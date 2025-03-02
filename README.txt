@@ -48,3 +48,5 @@ iniciada; ejemplo: N=3, sus pares consecutivos serían: 4, 6 y 8; donde N es el 
 24. Hacer un algoritmo de ordenamiento usando una lista 5 valores e ir comparando cada par de elementos adyacentes y cambiándolos de lugar si están en el orden incorrecto. Repetir hasta que la lista esté ordenada. Usar función PARA anidada.
 
 25. Hacer un algoritmo que diga cuántos dígitos tiene un número entero y mostrar qué dígitos los componen.
+
+26. Hacer un tictactoe.
