@@ -61,7 +61,7 @@ FinFuncion
 Funcion jugardor(Tab2, simb)
     Definir player Como Entero
     Repetir
-        Escribir "Seleccione una casilla disponible "
+        Escribir "Seleccione una casilla válida "
         Leer player
     Hasta Que player >= 1 Y player <= 9 Y Tab2[player] = ""
     
@@ -78,18 +78,25 @@ Algoritmo tictactoe
 	VEvalue <- Victoria(Tab2, TFEmpate)
 	
 	Mientras seguirJugando = VERDADERO y TFEmpate = FALSO Hacer
+		
+		Escribir "Turno del jugador 1 X, seleccione una casilla"
+		jugardor(Tab2, "X")
 		TFEmpate <- Empate(Tab2)
 		VEvalue <- Victoria(Tab2, TFEmpate)
-		Si VEvalue = 1 o VEvalue = 2 o VEvalue = 3 Entonces
+		Si VEvalue = 1 o VEvalue = 2 o VEvalue = 3 Entonces 
 			seguirJugando = FALSO
-		SiNo
-			Escribir "Turno del jugador 1 X, seleccione una casilla"
-			jugardor(Tab2, "X")
+		SiNo // Para que, antes de que pase al siguiente jugador, se verifique si ya ganó el jugador 1
 			Escribir "|----------|----------|"
 			Escribir "Turno del jugador 2 O, seleccione una casilla"
 			jugardor(Tab2, "O")
-			Escribir "|----------|----------|"
+			// Después del turno 2, se verifica si ya ganó
+			TFEmpate <- Empate(Tab2)
+			VEvalue <- Victoria(Tab2, TFEmpate)
+			Si VEvalue = 1 o VEvalue = 2 o VEvalue = 3 Entonces
+				seguirJugando = FALSO
+			FinSi
 		FinSi
+		
 	FinMientras
 	
 	// Dictaminar victora/derrota/empate

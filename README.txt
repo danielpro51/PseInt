@@ -49,4 +49,4 @@ iniciada; ejemplo: N=3, sus pares consecutivos serían: 4, 6 y 8; donde N es el 
 
 25. Hacer un algoritmo que diga cuántos dígitos tiene un número entero y mostrar qué dígitos los componen.
 
-26. Hacer un tictactoe.
+26. Hacer un tictactoe. Usar FUNCIÓN.
