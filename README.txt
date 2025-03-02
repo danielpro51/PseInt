@@ -40,3 +40,11 @@ iniciada; ejemplo: N=3, sus pares consecutivos serían: 4, 6 y 8; donde N es el 
 20. Hacer un algoritmo que determine si un año ingresado por el usuario es bisiesto o no, siguiendo las reglas de que un año es bisiesto si es divisible por 4, pero no por 100, a menos que también sea divisible por 400.
 
 21. Diseña un algoritmo que simule un reloj digital, mostrando el tiempo en formato HH:MM:SS. El reloj debe incrementar cada segundo y reiniciar a 00:00:00 cuando llega a 24:00:00. Usar función MIENTRAS y comando: ESPERAR n SEGUNDOS.
+
+22. Calcular las calificaciones de un grupo de alumnos. La nota final de cada alumno se calcula según el siguiente criterio: la parte práctica vale el 10%; la parte de problemas vale el 50% y la parte teórica el 40%. El algoritmo leerá el nombre del alumno, las tres notas, escribirá el resultado y volverá a pedir los datos del siguiente alumno hasta que el nombre sea una cadena vacía. Las notas deben estar entre 0 y 10, si no lo están, no imprimirá las notas, mostrara un mensaje de error y volverá a pedir otro alumno.
+
+23. Hacer una lista de 5 valores y asignarles valores aleatorios entre 1 y 100 e imprimir el resultado. Usar función PARA.
+
+24. Hacer un algoritmo de ordenamiento usando una lista 5 valores e ir comparando cada par de elementos adyacentes y cambiándolos de lugar si están en el orden incorrecto. Repetir hasta que la lista esté ordenada. Usar función PARA anidada.
+
+25. Hacer un algoritmo que diga cuántos dígitos tiene un número entero y mostrar qué dígitos los componen.
