@@ -8,11 +8,28 @@ Algoritmo mayor3Igual
 		// Para que no se ejecute cuando A, B y C Sean iguales y evitar esa comparación
 		Si (A > B) Y (A > C) Entonces
 			Escribir A, " es mayor que ", B " Y ", C
+			// Como A es el mayor, ver cuál es el segundo mayor número
+			Si (C > B) Entonces
+				Escribir "El menor es ", B
+			SiNo
+				Escribir "El menor es ", C
+			FinSi
 		SiNo
 			Si (B > A) Y (B > C) Entonces
 				Escribir B, " es mayor que ", A, " Y ", C
+				Si (C > A) Entonces
+					Escribir "El menor es ", A
+				SiNo
+					Escribir "El menor es ", C
+				FinSi
+			FinSi
+		FinSi
+		Si (C > A) Y (C > B) Entonces
+			Escribir C, " es mayor que ", B, " Y ", A
+			Si (B > A) Entonces
+				Escribir "El menor es ", A
 			SiNo
-				Escribir C, " es mayor que ", B, " Y ", A
+				Escribir "El menor es ", B
 			FinSi
 		FinSi
 	FinSi
