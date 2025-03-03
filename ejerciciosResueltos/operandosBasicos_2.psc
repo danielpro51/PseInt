@@ -7,12 +7,16 @@ Algoritmo operandosBasicos
 	// REAL: 1, 2, 3, 0.5, 0.25, etc.
 	Escribir "Dame dos números"
 	Leer A, B
-	suma <- A + B
-	resta <- A - B
-	multiplicacion <- A * B
-	division <- A/B
-	Escribir "La suma es ", suma
-	Escribir "La resta es ", resta
-	Escribir "La multiplicación es ", multiplicacion
-	Escribir "La división es ", division
+	Si B <> 0 Entonces
+		suma <- A + B
+		resta <- A - B
+		multiplicacion <- A * B
+		division <- A/B
+		Escribir "La suma es ", suma
+		Escribir "La resta es ", resta
+		Escribir "La multiplicación es ", multiplicacion
+		Escribir "La división es ", division
+	SiNo
+		Escribir "Poner valor distinto de cero"
+	FinSi
 FinAlgoritmo
