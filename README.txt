@@ -83,3 +83,19 @@ Luego, rellenar el resto con los números dispuestos, es decir, en la fila con e
 7 7 14 21 28 35 42 49 56 63
 8 8 16 24 32 40 48 56 64 72
 9 9 18 27 36 45 54 63 72 8
+
+29. Construir un cuadrado según la cantidad recibida, si n=4, entonces:
+
+****
+*  *
+*  *
+****
+
+30. Construir un triángulo invertido según la cantidad recibida, si n=4, entonces:
+
+****
+***
+**
+*
+
+Si usted desea, realizar variantes del mismo.
