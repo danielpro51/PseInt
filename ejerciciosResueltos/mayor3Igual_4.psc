@@ -2,9 +2,8 @@ Algoritmo mayor3Igual
 	Definir A, B, C Como Real
 	Escribir "Dime 3 números"
 	Leer A, B, C
-	Si (A = B) y (A = C) Entonces
-		Escribir "Son iguales"
-	SiNo // El bloque de abajo se pone dentro de la igualdad con el condicional SiNo
+	Si (A <> B) y (A <> C) Y (B <> C) Entonces
+		// El bloque de abajo se pone dentro de la igualdad con el condicional SiNo
 		// Para que no se ejecute cuando A, B y C Sean iguales y evitar esa comparación
 		Si (A > B) Y (A > C) Entonces
 			Escribir A, " es mayor que ", B " Y ", C
@@ -32,5 +31,7 @@ Algoritmo mayor3Igual
 				Escribir "El menor es ", B
 			FinSi
 		FinSi
+	SiNo
+		Escribir "Son iguales"
 	FinSi
 FinAlgoritmo
