@@ -1,6 +1,8 @@
 Funcion TrianguloInvertido(numero)
 	Definir altura, aux, cc Como Entero
+	Escribir "Dime la altura del triángulo: " Sin Saltar
 	Leer altura
+	Escribir "|--------------------||--------------------|"
 	aux = 0
 	cc = 0
 	// Forma 1
@@ -18,7 +20,9 @@ Funcion TrianguloInvertido(numero)
 FinFuncion
 Funcion TrianguloNormal(numero)
 	Definir altura, aux, cc Como Entero
+	Escribir "Dime la altura del triángulo: " Sin Saltar
 	Leer altura
+	Escribir "|--------------------||--------------------|"
 	// Forma 1
 	linea = ""
 	Para i <- 1 Hasta altura Hacer
@@ -37,7 +41,10 @@ Funcion TrianguloNormal(numero)
 	//FinPara
 FinFuncion
 Funcion TriangulodeLado(numero)
-	altura = 5
+	Definir altura, aux, espacios Como Entero
+	Escribir "Dime la altura del triángulo: " Sin Saltar
+	Leer altura
+	Escribir "|--------------------||--------------------|"
 	aux = altura
 	espacios = 0
 	// Forma 2
@@ -54,7 +61,9 @@ Funcion TriangulodeLado(numero)
 	FinPara
 FinFuncion
 Algoritmo triangulos_30
+	Escribir "|--------------------||--------------------|"
 	TrianguloInvertido(1)
 	//TrianguloNormal(1)
 	//TriangulodeLado(1)
+	Escribir "|--------------------||--------------------|"
 FinAlgoritmo

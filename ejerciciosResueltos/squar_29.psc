@@ -1,8 +1,11 @@
 Algoritmo squar_29
 	Definir cantidad Como Entero
-	Escribir "Dame la cantidad"
+	Escribir "|--------------------||--------------------|"
+	Escribir "Dime la altura del cuadrado: " Sin Saltar
 	Leer cantidad
+	Escribir "|--------------------||--------------------|"
 	// Parte de superior
+	
 	Para i <- 1 Hasta cantidad Hacer
 		Escribir "*" Sin Saltar
 	FinPara
@@ -17,8 +20,10 @@ Algoritmo squar_29
 		Escribir "*"
 	FinPara
 	// Parte de inferior
+	
 	Para i <- 1 Hasta cantidad Hacer
 		Escribir "*" Sin Saltar
 	FinPara
 	Escribir ""
+	Escribir "|--------------------||--------------------|"
 FinAlgoritmo

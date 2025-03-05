@@ -69,43 +69,122 @@ Funcion jugardor(Tab2, simb)
     ColocarFicha(player, Tab2, simb)
     MostarTablero(Tab2) // Actualizar tablero
 FinFuncion
-
+Funcion ReiniciarTablero(Tab2)
+	Para i <- 1 Hasta 9 Hacer
+		Tab2[i] = ""
+	FinPara
+FinFuncion
+Funcion seguirJJ <- RepetirJuego(VEvalue, Tab2)
+	Definir revancha Como Caracter
+	// Dictaminar victora/derrota/empate
+	Si VEvalue = 1 Entonces
+		Escribir "|--------------------||--------------------|"
+		Escribir "Ganó la X. ¿Quieres una revancha? Escribir sí/no para continuar."
+		Escribir "|--------------------||--------------------|"
+		Leer revancha
+		Si Minusculas(revancha) = "sí" Entonces
+			VEvalue = 0
+			seguirJJ <- VERDADERO
+			Esperar 1 Segundos
+			Limpiar Pantalla
+			Escribir "|--------------------||--------------------|"
+			Escribir "          Cargando nueva partida..."
+			Escribir "|--------------------||--------------------|"
+			Esperar 3 Segundos
+			Limpiar Pantalla
+			ReiniciarTablero(Tab2)
+			MostarTablero(Tab2)
+		SiNo
+			seguirJJ <- FALSO
+		FinSi
+	SiNo
+		Si VEvalue = 2 Entonces
+			Escribir "|--------------------||--------------------|"
+			Escribir "Ganó la O. ¿Quieres una revancha? Escribir sí/no para continuar."
+			Escribir "|--------------------||--------------------|"
+			Leer revancha
+			Si Minusculas(revancha) = "sí" Entonces
+				VEvalue = 0
+				seguirJJ <- VERDADERO
+				Esperar 1 Segundos
+				Limpiar Pantalla
+				Escribir "|--------------------||--------------------|"
+				Escribir "          Cargando nueva partida..."
+				Escribir "|--------------------||--------------------|"
+				Esperar 3 Segundos
+				Limpiar Pantalla
+				ReiniciarTablero(Tab2)
+				MostarTablero(Tab2)
+			SiNo
+				seguirJJ <- FALSO
+			FinSi
+		SiNo
+			Escribir "|--------------------||--------------------|"
+			Escribir "¡Empate! ¿Jugar de nuevo? Escribir sí/no para continuar."
+			Escribir "|--------------------||--------------------|"
+			Leer revancha
+			Si Minusculas(revancha) = "sí" Entonces
+				VEvalue = 0
+				seguirJJ <- VERDADERO
+				Esperar 1 Segundos
+				Limpiar Pantalla
+				Escribir "|--------------------||--------------------|"
+				Escribir "          Cargando nueva partida..."
+				Escribir "|--------------------||--------------------|"
+				Esperar 3 Segundos
+				Limpiar Pantalla
+				ReiniciarTablero(Tab2)
+				MostarTablero(Tab2)
+			SiNo
+				seguirJJ <- FALSO
+			FinSi
+		FinSi
+	FinSi
+FinFuncion
 Algoritmo tictactoe
 	Dimension Tab2[9]
-    MostarTablero(Tab2) // Mostar tablero inicial
 	seguirJugando = VERDADERO
 	
 	TFEmpate <- Empate(Tab2)
 	VEvalue <- Victoria(Tab2, TFEmpate)
-	Mientras seguirJugando = VERDADERO y TFEmpate = FALSO Hacer
-		Escribir "Turno del jugador 1 X, seleccione una casilla"
+    MostarTablero(Tab2) // Mostar tablero inicial
+	Escribir "|--------------------||--------------------|"
+	Escribir "   ¡Bienvenido!, presione enter para jugar"
+	Escribir "|--------------------||--------------------|"
+	Esperar Tecla
+	Limpiar Pantalla
+	Escribir "|--------------------||--------------------|"
+	Escribir "     ¡Buena suerte! Y que gane el mejor."
+	Escribir "|--------------------||--------------------|"
+	Esperar 1 Segundo
+	Limpiar Pantalla
+    MostarTablero(Tab2) // Mostar tablero inicial
+	Mientras seguirJugando = VERDADERO Hacer
+		
+		Escribir "Turno del jugador 1 X"
 		jugardor(Tab2, "X")
 		TFEmpate <- Empate(Tab2)
 		VEvalue <- Victoria(Tab2, TFEmpate)
-		Si VEvalue = 1 o VEvalue = 2 o VEvalue = 3 Entonces 
-			seguirJugando = FALSO
+		Si VEvalue = 1 o VEvalue = 2 o VEvalue = 3 Entonces
+			// Dictaminar victora/derrota/empate
+			seguirJJ <- RepetirJuego(VEvalue, Tab2)
+			seguirJugando <- seguirJJ
 		SiNo // Para que, antes de que pase al siguiente jugador, se verifique si ya ganó el jugador 1
-			Escribir "|----------|----------|"
-			Escribir "Turno del jugador 2 O, seleccione una casilla"
+			Escribir "Turno del jugador 2 O"
 			jugardor(Tab2, "O")
 			// Después del turno 2, se verifica si ya ganó
 			TFEmpate <- Empate(Tab2)
 			VEvalue <- Victoria(Tab2, TFEmpate)
 			Si VEvalue = 1 o VEvalue = 2 o VEvalue = 3 Entonces
-				seguirJugando = FALSO
+				// Dictaminar victora/derrota/empate
+				seguirJJ <- RepetirJuego(VEvalue, Tab2)
+				seguirJugando <- seguirJJ
 			FinSi
 		FinSi
-		
 	FinMientras
-	
-	// Dictaminar victora/derrota/empate
-	Si VEvalue = 1 Entonces
-		Escribir "Ganó la X"
-	SiNo
-		Si VEvalue = 2 Entonces
-			Escribir "Ganó la O"
-		SiNo
-			Escribir "Empate"
-		FinSi
-	FinSi
+	Esperar 1 Segundos
+	Limpiar Pantalla
+	Escribir "|--------------------||--------------------|"
+	Escribir "            ¡Gracias por jugar!"
+	Escribir "|--------------------||--------------------|"
 FinAlgoritmo

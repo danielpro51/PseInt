@@ -48,5 +48,7 @@ Algoritmo renarr_28
 		arreglo[i,1] = i-1
 	FinPara
 	RellenarVector(arreglo, filas, columnas)
+	Escribir "|--------------------||--------------------|"
 	ImprimirVector(arreglo, filas, columnas)
+	Escribir "|--------------------||--------------------|"
 FinAlgoritmo

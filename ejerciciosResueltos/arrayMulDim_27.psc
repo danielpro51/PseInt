@@ -22,15 +22,20 @@ Funcion ImprimirVector(Veeector, filas, columnas)
 			FinSi
 		FinPara
 	FinPara
-	Escribir ""
 FinFuncion
 Algoritmo arrayMulDim_27
 	Definir filas, columnas Como Entero
-	
-	Escribir "Dime cuántas filas son"
+	Escribir "|--------------------||--------------------|"
+	Escribir "Dime cuántas filas son " Sin Saltar
 	Leer filas
-	Escribir "Dime cuántas columnas son"
+	Escribir "Dime cuántas columnas son " Sin Saltar
 	Leer columnas
+	Escribir "|--------------------||--------------------|"
+	Limpiar Pantalla
+	Escribir "|--------------------||--------------------|"
+	Escribir "El array ","(",filas,",",columnas,") con valores entre 1-9 quedó así:"
+	Escribir "|--------------------||--------------------|"
 	RellenarVector(filas,columnas)
+	Escribir "|--------------------||--------------------|"
 	
 FinAlgoritmo

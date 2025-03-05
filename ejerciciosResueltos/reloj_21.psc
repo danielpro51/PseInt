@@ -3,6 +3,9 @@ Algoritmo reloj_21
 	minutos <- 0
 	horas <- 0
 	Mientras Verdadero Hacer
+		Limpiar Pantalla
+		Escribir "|--------------------||--------------------|"
+		Escribir "                  " Sin Saltar
 		//Estilizador; opcional, pero mejora el acabado
 		Si horas < 10 Entonces
 			Escribir "0" Sin Saltar
@@ -35,6 +38,7 @@ Algoritmo reloj_21
 				horas <- 0
 			FinSi
 		FinSi
+		Escribir "|--------------------||--------------------|"
 		//Escribir horas,":",minutos,":",seg
 		Esperar 1 Segundos
 	FinMientras

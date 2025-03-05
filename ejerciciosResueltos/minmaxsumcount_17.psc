@@ -1,6 +1,7 @@
 Algoritmo minmaxsumcont_17
 	Definir min, max, sum, cont, nUsuario Como Entero
-	Escribir "Dime una serie de números. Terminar con 0"
+	Escribir "|--------------------||--------------------|"
+	Escribir "Dime una serie de números para determinar su suma, cantidad total número mínimo y máximo. Terminar con 0"
 	Leer nUsuario
 	max <- nUsuario
 	min <- nUsuario
@@ -19,8 +20,11 @@ Algoritmo minmaxsumcont_17
 		Leer nUsuario
 		cont <- cont + 1
 	FinMientras
+	Limpiar Pantalla
+	Escribir "|--------------------||--------------------|"
 	Escribir "La suma es ", sum
 	Escribir "La cantidad total es ", cont
 	Escribir "El número máximo es ", max
 	Escribir "El número mínimo es ", min
+	Escribir "|--------------------||--------------------|"
 FinAlgoritmo
