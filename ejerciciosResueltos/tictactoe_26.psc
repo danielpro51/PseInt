@@ -1,4 +1,5 @@
 Funcion MostarTablero  ( Tab2 ) // Muestra el tablero y sirve para actualizarlo
+	Limpiar Pantalla // Limpiar pantalla por acabado estético
 	Escribir " "
 	Escribir "      ||     ||     "
 	Escribir "   ",Tab2[1],"   ||  ",Tab2[2],"   ||  ",Tab2[3]
@@ -71,14 +72,12 @@ FinFuncion
 
 Algoritmo tictactoe
 	Dimension Tab2[9]
+    MostarTablero(Tab2) // Mostar tablero inicial
 	seguirJugando = VERDADERO
-	MostarTablero(Tab2)
 	
 	TFEmpate <- Empate(Tab2)
 	VEvalue <- Victoria(Tab2, TFEmpate)
-	
 	Mientras seguirJugando = VERDADERO y TFEmpate = FALSO Hacer
-		
 		Escribir "Turno del jugador 1 X, seleccione una casilla"
 		jugardor(Tab2, "X")
 		TFEmpate <- Empate(Tab2)
