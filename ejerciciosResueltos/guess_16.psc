@@ -51,7 +51,7 @@ Algoritmo guess_16
 					palabraRepe <- VERDADERO
 					Limpiar Pantalla
 					Escribir "|--------------------||--------------------|"
-					Escribir "     ¡Ups! ¿Te repetiste de palabra? ", intentos
+					Escribir "         ¡Ups! ¿Repetiste de palabra?"
 					Escribir "|--------------------||--------------------|"
 					Esperar 2 Segundos
 					Limpiar Pantalla

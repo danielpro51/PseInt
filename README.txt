@@ -102,6 +102,16 @@ Si usted desea, realizar variantes del mismo.
 
 31. Invertir el orden una secuencia numérica. input = 21, output = 12
 
-32. Hacer la secuencia de Fibonacci. input = 3, output = 1 1 2; la secuencia de Fibonacci es acumulativa a razón de la suma de sus dos números anteriores.
+32. Hacer la secuencia de Fibonacci. input = 3, output = (0) 1 1 2; la secuencia de Fibonacci es acumulativa a razón de la suma de sus dos números anteriores.
 
 33. Hacer la secuencia factorial. input = 5, output = 120; los factoriales es una secuencia decreciente desde n hasta 1
+
+34. Hacer el juego de ahorcado.
+
+"   +===+"
+"   |   |"
+"   O   |"
+"  /|\  |"
+"  / \  |"
+"       |"
+"=======|"
