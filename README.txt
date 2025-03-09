@@ -134,3 +134,5 @@ Si usted desea, realizar variantes del mismo.
 	"           /###############\"
 	"          /#################\"
 	"         |###################|"
+
+36. Dado un patrón "ABBA", ver cuántas aparece en "BAABABBAABABABABBA".
