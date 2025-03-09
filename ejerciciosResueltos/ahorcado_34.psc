@@ -1,114 +1,3 @@
-Funcion CargarMuneco(intentos)
-	Limpiar Pantalla
-	Si intentos = 10 Entonces
-		Escribir "        "
-		Escribir "        "
-		Escribir "        "
-		Escribir "        "
-		Escribir "        "
-		Escribir "        "
-		Escribir "=======|"
-	FinSi
-	Si intentos = 9 Entonces
-		Escribir "        "
-		Escribir "        "
-		Escribir "        "
-		Escribir "        "
-		Escribir "        "
-		Escribir "       |"
-		Escribir "=======|"
-	FinSi
-	Si intentos = 8 Entonces
-		Escribir "        "
-		Escribir "        "
-		Escribir "        "
-		Escribir "        "
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "=======|"
-	FinSi
-	Si intentos = 7 Entonces
-		Escribir "        "
-		Escribir "        "
-		Escribir "        "
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "=======|"
-	FinSi
-	Si intentos = 6 Entonces
-		Escribir "        "
-		Escribir "        "
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "=======|"
-	FinSi
-	Si intentos = 5 Entonces
-		Escribir "        "
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "=======|"
-	FinSi
-	Si intentos = 4 Entonces
-		Escribir "   +===+"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "=======|"
-	FinSi
-	Si intentos = 3 Entonces
-		Escribir "   +===+"
-		Escribir "   |   |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "=======|"
-	FinSi
-	Si intentos = 2 Entonces
-		Escribir "   +===+"
-		Escribir "   |   |"
-		Escribir "   O   |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "=======|"
-	FinSi
-	Si intentos = 1 Entonces
-		Escribir "   +===+"
-		Escribir "   |   |"
-		Escribir "   O   |"
-		Escribir "  /|\  |"
-		Escribir "       |"
-		Escribir "       |"
-		Escribir "=======|"
-	FinSi
-	Si intentos = 0 Entonces
-		Escribir "   +===+"
-		Escribir "   |   |"
-		Escribir "   O   |"
-		Escribir "  /|\  |"
-		Escribir "  / \  |"
-		Escribir "       |"
-		Escribir "=======|"
-	FinSi
-	Si intentos < 0 Entonces
-		Escribir "   +===+"
-		Escribir "   |   |"
-		Escribir "   |   | Murió..."
-		Escribir "   O   |"
-		Escribir "  /|\  |"
-		Escribir "  / \  |"
-		Escribir "=======|"
-	FinSi
-FinFuncion
 Algoritmo ahorcado_34
 	Definir palabra, palabraAdivinar, victima Como Caracter
 	Definir length, intentos, acertoLetra, guardarPalabraRepetida, ganoAdivinando Como Entero
@@ -135,7 +24,7 @@ Algoritmo ahorcado_34
 	palabrasAleatorias[16] = "Aterciopelados"
 	palabra = palabrasAleatorias[Aleatorio(1,16)]
 	length = Longitud(palabra)
-	Dimension guardarIntentos[intentos]
+	Dimension guardarIntentos[intentos*2]
 	Dimension pp[length]
 	falloPalabra = FALSO
 	palabraRepetida = FALSO
@@ -148,26 +37,13 @@ Algoritmo ahorcado_34
 	Escribir "|--------------------||--------------------|"
 	Esperar 2 Segundos
 	Limpiar Pantalla
-	// Cargar muñeco inicial
-	Escribir "   +===+"
-	Escribir "   |   |"
-	Escribir "   O   |"
-	Escribir "  /|\  |"
-	Escribir "  / \  |"
-	Escribir "       |"
-	Escribir "=======|"
+	CargarMuneco(0)
 	Escribir "|--------------------||--------------------||--------------------|"
 	Escribir " La persona es ", victima,"."
 	Escribir "|--------------------||--------------------||--------------------|"
 	Esperar 2 Segundos
 	Limpiar Pantalla
-	Escribir "   +===+"
-	Escribir "   |   |"
-	Escribir "   O   |"
-	Escribir "  /|\  |"
-	Escribir "  / \  |"
-	Escribir "       |"
-	Escribir "=======|"
+	CargarMuneco(0)
 	Escribir "|--------------------||--------------------|"
 	Escribir "            ¿Crees poder salvarlo?"
 	Escribir "|--------------------||--------------------|"
@@ -199,20 +75,6 @@ Algoritmo ahorcado_34
 	FinPara
 	//
 	Mientras intentos <> 0 Hacer
-		// Verificar si, mediante la completación de palabras y no insertando la palabra en sí, la adivinó
-		Para i <- 1 Hasta length Hacer
-			Si pp[i] = Subcadena(palabra,i,i) Entonces
-				ganoAdivinando <- ganoAdivinando + 1
-			FinSi
-		FinPara
-		// Ganó insertando la palabra completa en sí o adivinando
-		Si palabraAdivinar == palabra o ganoAdivinando == length Entonces
-			Limpiar Pantalla
-			salvoMuneco = VERDADERO
-			intentos = 0
-		SiNo
-			ganoAdivinando = 0
-		FinSi
 		//
 		Escribir ""
 		CargarMuneco(intentos)
@@ -227,7 +89,7 @@ Algoritmo ahorcado_34
 		Para i <- 1 Hasta guardarPalabraRepetida+1 Hacer
 			Si guardarIntentos[i] == palabraAdivinar Entonces
 				palabraRepetida <- VERDADERO
-				intentos <- intentos - 1
+				intentos <- intentos - 2
 				Limpiar Pantalla
 				Escribir "|--------------------||--------------------|"
 				Escribir "       ¡Ups! ¿Repetiste la palabra? :)"
@@ -235,7 +97,7 @@ Algoritmo ahorcado_34
 				Esperar 1 Segundos
 				Limpiar Pantalla
 				Escribir "|--------------------||--------------------|"
-				Escribir "              ¡Eso se castiga!"
+				Escribir "       ¡Eso se castiga con -2 intentos!"
 				Escribir "|--------------------||--------------------|"
 				Esperar 2 Segundos
 				Limpiar Pantalla
@@ -260,9 +122,14 @@ Algoritmo ahorcado_34
 					SiNo
 						falloPalabra = VERDADERO
 					FinSi
+					// A pesar de que acertara algunas letras, si YA están en sí adivinadas, restarles un intento
+					// El que lea esto que me ayude, ya ando loco, no sé qué hacer
+					Si Subcadena(palabraAdivinar,i,i) == pp[k] y intentos <> 10 Entonces
+						falloPalabra = VERDADERO
+						acertoPalabra = -1
+					FinSi
 				FinPara
 			FinPara
-			
 			// Si la letra no era
 			// Si acertó 0 letras o más de una, si acertó una no pasa nada; esto es para darle más emoción al juego
 			// Y así no depender si repitió una o no acertó ninguna ;)
@@ -276,17 +143,10 @@ Algoritmo ahorcado_34
 					intentos <- intentos - 1
 					falloPalabra = FALSO
 					acertoLetra = 0
-					//SiNo
-					//	Si acertoLetra > 0 Entonces
-					//		Escribir "|--------------------||--------------------|"
-					//		Escribir "       Acertaste algunas; pero te faltan"
-					//		Escribir "|--------------------||--------------------|"
-					//		Esperar 1 Segundos
-					//		Limpiar Pantalla
-					//		intentos <- intentos - 1
-					//		falloPalabra = FALSO
-					//		acertoLetra = 0
-					//	FinSi
+				SiNo
+					intentos <- intentos - 1
+					falloPalabra = FALSO
+					acertoLetra = 0
 				FinSi
 			FinSi
 		FinSi
@@ -294,8 +154,129 @@ Algoritmo ahorcado_34
 		acertoLetra = 0
 		falloPalabra = Verdadero
 		palabraRepetida = FALSO
+		
+		// Verificar si, mediante la completación de palabras y no insertando la palabra en sí, la adivinó
+		Para i <- 1 Hasta length Hacer
+			Si pp[i] = Subcadena(palabra,i,i) Entonces
+				ganoAdivinando <- ganoAdivinando + 1
+			FinSi
+		FinPara
+		// Ganó insertando la palabra completa en sí o adivinando
+		Si palabraAdivinar == palabra o ganoAdivinando == length Entonces
+			Limpiar Pantalla
+			salvoMuneco = VERDADERO
+			intentos = 0
+		SiNo
+			ganoAdivinando = 0
+		FinSi
 	FinMientras
 	// Verificar si ganó o perdió
+	FinalJuego(salvoMuneco)
+FinAlgoritmo
+// Funciones
+Funcion CargarMuneco(intentos)
+	Limpiar Pantalla
+	Segun intentos Hacer
+		10:
+			Escribir "        "
+			Escribir "        "
+			Escribir "        "
+			Escribir "        "
+			Escribir "        "
+			Escribir "        "
+			Escribir "=======|"
+		9:
+			Escribir "        "
+			Escribir "        "
+			Escribir "        "
+			Escribir "        "
+			Escribir "        "
+			Escribir "       |"
+			Escribir "=======|"
+		8:
+			Escribir "        "
+			Escribir "        "
+			Escribir "        "
+			Escribir "        "
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "=======|"
+		7:
+			Escribir "        "
+			Escribir "        "
+			Escribir "        "
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "=======|"
+		6:
+			Escribir "        "
+			Escribir "        "
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "=======|"
+		5:
+			Escribir "        "
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "=======|"
+		4:
+			Escribir "   +===+"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "=======|"
+		3:
+			Escribir "   +===+"
+			Escribir "   |   |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "=======|"
+		2:
+			Escribir "   +===+"
+			Escribir "   |   |"
+			Escribir "   O   |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "=======|"
+		1:
+			Escribir "   +===+"
+			Escribir "   |   |"
+			Escribir "   O   |"
+			Escribir "  /|\  |"
+			Escribir "       |"
+			Escribir "       |"
+			Escribir "=======|"
+		0:
+			Escribir "   +===+"
+			Escribir "   |   |"
+			Escribir "   O   |"
+			Escribir "  /|\  |"
+			Escribir "  / \  |"
+			Escribir "       |"
+			Escribir "=======|"
+		-1:
+			Escribir "   +===+"
+			Escribir "   |   |"
+			Escribir "   |   | Murió..."
+			Escribir "   O   |"
+			Escribir "  /|\  |"
+			Escribir "  / \  |"
+			Escribir "=======|"
+	FinSegun
+FinFuncion
+
+Funcion FinalJuego(salvoMuneco)
 	Si salvoMuneco = VERDADERO Entonces
 		Escribir "|--------------------||--------------------|"
 		Escribir "           ¡Bien! ¡¡Lo salvaste!!"
@@ -312,14 +293,16 @@ Algoritmo ahorcado_34
 		Escribir "  / \  "
 		Escribir "+============"
 	SiNo
-			Escribir "|--------------------||--------------------|"
-			Escribir "              ... ¿de verdad?"
-			Escribir "|--------------------||--------------------|"
-			Esperar 1 Segundos
-			Limpiar Pantalla
-			CargarMuneco(-1)
-			Escribir "|--------------------||--------------------||--------------------|"
-			Escribir "  Acabaste con ", victima,"... le has fallado..."
-			Escribir "|--------------------||--------------------||--------------------"
+		CargarMuneco(intentos)
+		Escribir "|--------------------||--------------------|"
+		Escribir "              ... ¿de verdad?"
+		Escribir "|--------------------||--------------------|"
+		Esperar 1 Segundos
+		Limpiar Pantalla
+		CargarMuneco(-1)
+		Escribir "|--------------------||--------------------||--------------------|"
+		Escribir "  Acabaste con ", victima,"... le has fallado..."
+		Escribir "|--------------------||--------------------||--------------------"
 	FinSi
-FinAlgoritmo
+FinFuncion
+	
