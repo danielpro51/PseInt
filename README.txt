@@ -82,7 +82,7 @@ Luego, rellenar el resto con los números dispuestos, es decir, en la fila con e
 6 6 12 18 24 30 36 42 48 54
 7 7 14 21 28 35 42 49 56 63
 8 8 16 24 32 40 48 56 64 72
-9 9 18 27 36 45 54 63 72 8
+9 9 18 27 36 45 54 63 72 81
 
 29. Construir un cuadrado según la cantidad recibida, si n=4, entonces:
 
@@ -136,3 +136,5 @@ Si usted desea, realizar variantes del mismo.
 	"         |###################|"
 
 36. Dado un patrón "ABBA", ver cuántas aparece en "BAABABBAABABABABBA".
+
+37. Hacer un juego de cartas por pares; como PSeInt no tiene Shuffles, aplicar el algoritmo Fisher-Yates para aleatorizar la lista.

@@ -25,7 +25,9 @@ Algoritmo tragaperras_35
 	Escribir "|--------------------||--------------------||--------------------|"
 	Escribir " Tienes ", saldo," de saldo disponible"
 	Escribir "|--------------------||--------------------||--------------------|"
-	Leer apuesta
+	Repetir
+		Leer apuesta
+	Hasta Que apuesta <= saldo
 	Escribir "|--------------------||--------------------|"
 	Escribir "          ¿Cuántos giros quieres?"
 	Escribir "|--------------------||--------------------|"
