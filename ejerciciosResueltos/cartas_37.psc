@@ -32,7 +32,7 @@ Funcion RellenarVector(arreglo, filas, columnas, ppAUX)
 	FinPara
 FinFuncion
 Algoritmo cartas_37
-	Definir filas, columnas, pares, contador Como Entero
+	Definir filas, columnas, pares, contador, ccc Como Entero
 	Definir Coor1X, Coor2X, Coor1Y, Coor2Y Como Entero
 	Definir words Como Caracter
 	Definir tableroLleno Como Logico
@@ -58,7 +58,7 @@ Algoritmo cartas_37
 	// Asignación de valores aleatorios
 	words = "abcdefghijklmnopqrstuvwxz"
 	pares <- Redon((filas*columnas)/2)
-	Si pared % 2 == 0 Entonces
+	Si pares % 2 == 0 Entonces
 		pares <- pares
 	SiNo
 		pares <- pares + 1
@@ -84,6 +84,7 @@ Algoritmo cartas_37
 			contador <- contador + 1
 		FinPara
 	FinPara
+	ccc <- 0
 	Mientras tableroLleno == FALSO Hacer
 		// Verificar si están dentro del rango
 		// Carta 1
