@@ -105,7 +105,8 @@ Algoritmo cartas_37
 			Escribir "Dime la columna de la carta 2: " Sin Saltar
 			Leer Coor2Y
 		Hasta Que Coor2Y <= columnas
-		Escribir pp[Coor1X,Coor1Y] + pp[Coor2X,Coor2Y],"..."
+		
+		
 		Escribir ppAUX[Coor1X,Coor1Y] + ppAUX[Coor2X,Coor2Y],"..w"
 		// Verificar si la casilla YA FUE ACERTADA y no hacer validación
 		// Si las coordenadas son iguales pero si NO decide insertar las mismas. (x1,y1) == (x1,y1) NO

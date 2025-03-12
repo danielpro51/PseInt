@@ -30,7 +30,7 @@ Algoritmo ahorcado_34
 	palabraRepetida = FALSO
 	salvoMuneco = FALSO
 	acertoLetra = 0
-	victima = "José José"
+	victima = "Fernando Carrascal"
 	// Cargar juego
 	Escribir "|--------------------||--------------------|"
 	Escribir "                 Bienvenido"
@@ -62,14 +62,10 @@ Algoritmo ahorcado_34
 	// Cargar barra donde se pondrán las palabras
 	Para i <- 1 Hasta length Hacer
 		// Verificar si tiene espacios o comas. Mejora el acabado y facilita el juego
-		Si Subcadena(palabra,i,i) = " " Entonces
-			pp[i] = " "
+		Si Subcadena(palabra,i,i) = " " o Subcadena(palabra,i,i) = ","  Entonces
+			pp[i] = Subcadena(palabra,i,i)
 		SiNo
-			Si Subcadena(palabra,i,i) = "," Entonces
-				pp[i] = ","
-			SiNo
-				pp[i] = "_"
-			FinSi
+			pp[i] = "_"
 		FinSi
 		Escribir pp[i]," " Sin Saltar // Imprimir inicial
 	FinPara
