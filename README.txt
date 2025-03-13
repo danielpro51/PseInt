@@ -138,3 +138,5 @@ Si usted desea, realizar variantes del mismo.
 36. Dado un patrón "ABBA", ver cuántas aparece en "BAABABBAABABABABBA".
 
 37. Hacer un juego de cartas por pares; como PSeInt no tiene Shuffles, aplicar el algoritmo Fisher-Yates para aleatorizar la lista.
+
+38. Verificar si un número es un número perfecto y su primo correspondiente. Hacerlo de la manera más optimizada posible.

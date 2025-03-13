@@ -109,7 +109,9 @@ Funcion GirarMaquina(simbolos, saldo, apuesta, tiempo)
 				Escribir "|--------------------||--------------------||--------------------|"
 				Escribir " Tienes ", saldo," de saldo disponible."
 				Escribir "|--------------------||--------------------||--------------------|"
-				Leer apuesta
+				Repetir
+					Leer apuesta
+				Hasta Que apuesta <= saldo
 				Escribir "|--------------------||--------------------|"
 				Escribir "          ¿Cuántos giros quieres?"
 				Escribir "|--------------------||--------------------|"
@@ -168,7 +170,9 @@ Funcion GirarMaquina(simbolos, saldo, apuesta, tiempo)
 					Escribir "|--------------------||--------------------||--------------------|"
 					Escribir " Tienes ", saldo," de saldo disponible."
 					Escribir "|--------------------||--------------------||--------------------|"
-					Leer apuesta
+					Repetir
+						Leer apuesta
+					Hasta Que apuesta <= saldo
 					Escribir "|--------------------||--------------------|"
 					Escribir "          ¿Cuántos giros quieres?"
 					Escribir "|--------------------||--------------------|"

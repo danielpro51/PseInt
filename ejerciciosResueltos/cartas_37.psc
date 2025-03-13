@@ -106,8 +106,6 @@ Algoritmo cartas_37
 			Leer Coor2Y
 		Hasta Que Coor2Y <= columnas
 		
-		
-		Escribir ppAUX[Coor1X,Coor1Y] + ppAUX[Coor2X,Coor2Y],"..w"
 		// Verificar si la casilla YA FUE ACERTADA y no hacer validación
 		// Si las coordenadas son iguales pero si NO decide insertar las mismas. (x1,y1) == (x1,y1) NO
 		Si (ppAUX[Coor1X,Coor1Y] == ppAUX[Coor2X,Coor2Y]) y (Coor1X <> Coor2X o Coor1Y <> Coor2Y) y (pp[Coor1X,Coor1Y] == "[?]" y pp[Coor2X,Coor2Y] == "[?]") Entonces
