@@ -146,5 +146,5 @@ El código presentado en la carpeta "ejerciciosResueltos" está modificado: es d
 
 40. Sea feliz. Con este último ya usted sabría todo lo necesario sobre PSeInt y a parte, potenciado su lógica de programación en dos aspectos fundamentales: primero, al mejorar su comprensión y resolución de problemas de manera efectiva; segundo, PSeInt al ser código interpretador, tiene demasiadas limitantes. Dado lo anterior, usted tuvo que desenvolverse implementando mecánicas creativas y efectivas. Sea feliz y no vuelva más a PSeInt.
 
-![NOTE]
-Estos ejercicios fueron una recopilación de distintas páginas.
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
