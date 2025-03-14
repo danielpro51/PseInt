@@ -145,6 +145,3 @@ Si usted desea, realizar variantes del mismo.
 El código presentado en la carpeta "ejerciciosResueltos" está modificado: es decir, amplió la mecánica del ejercicio. Se seleccionó un número al azar del 1 al 16 como un máximo de dulces a recolectar y "navegar" entre salas buscándolos usando la puerta de salida. Si usted desea implementar la modificación ya mencionada, adelante, no está obligado.
 
 40. Sea feliz. Con este último ya usted sabría todo lo necesario sobre PSeInt y a parte, potenciado su lógica de programación en dos aspectos fundamentales: primero, al mejorar su comprensión y resolución de problemas de manera efectiva; segundo, PSeInt al ser código interpretador, tiene demasiadas limitantes. Dado lo anterior, usted tuvo que desenvolverse implementando mecánicas creativas y efectivas. Sea feliz y no vuelva más a PSeInt.
-
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
