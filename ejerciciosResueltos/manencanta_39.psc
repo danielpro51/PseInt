@@ -128,7 +128,7 @@ Funcion MoverJugador(arreglo, filas, columnas)
 	VIC = FALSO
 	Mientras VIC = FALSO Hacer
 		Escribir "|--------------------||--------------------|"
-		Escribir " Tienes ", ccDulces,"/",dulcesRec," dulces.", ccDulcAnt
+		Escribir " Tienes ", ccDulces,"/",dulcesRec," dulces."
 		Escribir "|--------------------||--------------------|"
 		Escribir " Hacia dónde te mueves W/A/S/D "
 		Escribir "|--------------------||--------------------|"
