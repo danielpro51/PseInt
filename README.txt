@@ -33,7 +33,7 @@ iniciada; ejemplo: N=3, sus pares consecutivos serían: 4, 6 y 8; donde N es el 
 
 17. Hacer un algoritmo en la cual el usuario ponga N números, detectar cuál es el mayor, el menor, la cantidad total y suma total. El programa finaliza con 0.
 
-18. Hacer un algoritmo el cual imprima los primeros 100 números pares e impares. Si es par "Bizz", si es impar "Buzz", si no es ninguna colocar el número. Usa función PARA.
+18. Hacer un algoritmo el cual imprima los primeros 100 números pares e impares. Si es par "Bizz", si es impar "Buzz", si es par e impar "BizzBuzz" y si no es ninguna colocar el número. Usa función PARA.
 
 19. Hacer un algoritmo que solicite un día, mes y año al usuario. Formatea y muestra la fecha como "día de mes del año", validando que el día esté entre 1 y 31, el mes entre 1 y 12, y el año sea mayor que 0. Si los datos son inválidos, muestra un mensaje de error. Usar función SEGÚN.
 
